@@ -1,0 +1,6 @@
+<h1>Yo</h1>
+<%=h @order.first_name %>  <%=h @order.last_name %>
+<% form_for @order do |f| -%>
+  <%= f.hidden_field :express_token %>
+  <%= f.submit "Complete order" %>
+<% end -%>
