@@ -6,6 +6,7 @@ gem "prawn"
 gem "haml"
 gem "bundler"
 gem "activemerchant"
+gem "sqlite3-ruby"
 
 group :cucumber do
   gem "cucumber", "0.8.5"
