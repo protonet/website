@@ -5,7 +5,7 @@ gem "rails", "2.3.9"
 gem "prawn"
 gem "haml"
 gem "bundler"
-gem "activemerchant"
+# gem "activemerchant"
 gem "sqlite3-ruby"
 
 group :cucumber do
