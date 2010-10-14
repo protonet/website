@@ -9,23 +9,23 @@ div, ul, li				{ padding: 0; margin: 0; }
 		#logo								{ position: absolute; float: left; background-image: url('/images/logo.png'); background-repeat: no-repeat; width: 225px; height: 125px; }
 			#logo h1						{ color: transparent; font-size: 0; font-weight: normal; }
 		#slogan								{ float: left; margin-left: 200px; padding: 30px 50px 10px; text-transform: uppercase; }
-	#page-middle							{ margin: 0 auto; width: 700px; clear: both; background-color: #a3bdff; color: #425380; padding: 20px 0 30px; -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+	#page-middle							{ margin: 0 auto; width: 700px; clear: both; background-color: #fff; color: #425380; padding: 20px 0 30px; -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 		#social-networks					{ text-align: right; margin: 10px 40px 0; }
 			#social-networks span			{ background-color: #fff; padding: 5px 10px; margin: 10px 0 10px 10px; }
 		#abstract							{ margin: 25px 40px 15px; padding: 15px; background-color: #ff7f31; color: white; font-size: 150%; -moz-border-radius: 10px; border-radius: 10px; }
 			#abstract h2					{ text-transform: uppercase; font-weight: normal; font-size: 36px; margin: 0; }
 			#abstract p						{ font-weight: normal; font-size: 20px; margin: 0;}
 		#content							{ margin: 10px 40px; }
+			#tab-switcher					{ border-bottom: 1px solid #DAE4FF; margin: 0 0 10px; }
+				#tab-switcher .tab			{ border: 1px solid #DAE4FF; }
+			#info-picture					{ background-color: #fff; padding: 10px 0; -moz-border-radius: 10px; border-radius: 10px; }
 			#content-left					{ float: left; width: 320px; }
 				#content-left p				{ padding: 10px; }
-				#content-left-balloon		{ margin: 50px 0 0; background-color: white; padding: 5px 10px; -moz-border-radius: 10px; border-radius: 10px; }
+			#content-right					{ float: right; width: 275px; }
+				#content-right-balloon		{ margin: 50px 0 0; background-color: #dae4ff; padding: 5px 10px; -moz-border-radius: 10px; border-radius: 10px; }
 				#balloon-cone				{ margin-top: -25px; width: 100%; height: 200px; background-image: url('/images/balloon-cone.png'); background-repeat: no-repeat; background-position: 20px 20px; }
 					#protonet-box			{ width: 100%; height: 100%; background-image: url('/images/protonet-box.png'); background-repeat: no-repeat; background-position: right center; }
 						#protonet-dude		{ width: 100%; height: 100%; background-image: url('/images/protonet-dude.png'); background-repeat: no-repeat; background-position: 25% 90%; }
-			#content-right					{ float: right;width: 275px; background-color: #85a7ff; }
-				#content-right h3			{ text-transform: uppercase; padding: 5px 10px; font-weight: normal; }
-				#content-right ul			{ background-color: #fff; }
-					#content-right ul li	{ margin: 10px 0 0 10px; padding: 15px 0 0 30px; list-style-type: none; background-image: url('/images/list-icon.png'); background-repeat: no-repeat; background-position: left center; }
 			#specs							{ margin: 10px 0 0; }
 	#page-bottom							{ margin: 10px auto; width: 700px; clear: both; padding: 10pxpx; }
 
@@ -45,3 +45,5 @@ table					{ table-layout: fixed; width: 100%; border-collapse: collapse; }
 th, td					{ padding: 8px 10px; vertical-align: top; border: 1px solid #425380; }
 table li				{ margin: 0 0 0 20px; }
 .highlight_specs		{ background-color: #fff; }
+
+.tab					{ display: inline-block; padding: 10px; }

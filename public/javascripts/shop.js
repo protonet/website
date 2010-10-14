@@ -96,7 +96,15 @@ $(document).ready(function() {
 		updateTotalCost(['basic', 'power', 'extreme']);
 	});
 
+
 	$('.order_type').click(function() {
 		highlightSpecs($(this).attr('id'));
 	});
+
+
+	$('.tab').click(function() {
+		$('.content-tab').hide();
+		$('#content-' + $(this).attr('id')).show();
+	});
+	$('#content-tab-2').hide();
 });
