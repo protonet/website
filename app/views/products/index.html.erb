@@ -32,6 +32,59 @@
           <div id="content-left">
             <p>The protonet is not just some box with some really cool features, we're building this with a much bigger movement in mind.</p>
             <%= link_to image_tag("https://www.paypal.com/de_DE/i/btn/btn_xpressCheckout.gif"), express_new_order_path %>
+			<form action="" method="post" id="buy_form">
+				<div class="bold">
+					<span class="order_type">Option</span>
+					<span class="order_single_price">Price</span>
+					<span class="order_count">Amount</span>
+					<span class="order_total_price">Total</span>
+				</div>
+				<div class="specs_basic">
+					<span class="order_type" id="specs_basic"><a href="#specifications" title="show specs">Basic</a></span>
+					<span class="order_single_price"><span id="single_price_basic">399</span> EUR</span>
+					<span class="order_count">
+						<select id="order_count_basic" name="order_count_basic">
+							<option value="0">- none -</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="10">many</option>
+						</select>
+					</span>
+					<span class="order_total_price"><span id="total_price_basic">0</span> EUR</span>
+				</div>
+				<div class="specs_power">
+					<span class="order_type" id="specs_power"><a href="#specifications" title="show specs">Power</a></span>
+					<span class="order_single_price"><span id="single_price_power">499</span> EUR</span>
+					<span class="order_count">
+						<select id="order_count_power" name="order_count_power">
+							<option value="0">- none -</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="10">many</option>
+						</select>
+					</span>
+					<span class="order_total_price"><span id="total_price_power">0</span> EUR</span>
+				</div>
+				<div class="specs_extreme">
+					<span class="order_type" id="specs_extreme"><a href="#specifications" title="show specs">Extreme</a></span>
+					<span class="order_single_price"><span id="single_price_extreme">599</span> EUR</span>
+					<span class="order_count">
+						<select id="order_count_extreme" name="order_count_extreme">
+							<option value="0">- none -</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="10">many</option>
+						</select>
+					</span>
+					<span class="order_total_price"><span id="total_price_extreme">0</span> EUR</span>
+				</div>
+				<div class="bold">
+					<span class="order_type">&nbsp;</span>
+					<span class="order_single_price">&nbsp;</span>
+					<span class="order_count">&nbsp;</span>
+					<span class="order_total_price"><span id="total_price">0</span> EUR</span>
+				</div>
+			</form>
             <div id="content-left-balloon">
               <p>
               Did you know that protonet nodes can be coupled to create a bigger distributed social network?<br/>
@@ -58,8 +111,123 @@
               <li>get rid of your server-rack and it's €100/month electrical bill but still own your own server?<div class="list-icon-divider" style="background: none; margin-bottom: 0"></div></li>
             </ul>
           </div>
-        </div>
-        <div class="clearer"></div>
+			<div class="clearer"></div>
+			<div id="specs">
+				<h2><a name="specifications">Specifications</a></h2>
+				<table>
+					<tr>
+						<th class="specs_basic">base node</th>
+						<th class="specs_power">power node</th>
+						<th class="specs_extreme">extreme node</th>
+					</tr>
+					<tr>
+						<td colspan="3" class="specs_basic specs_power specs_extreme">
+							mounted in our handmade protonet case, real metal, real awesome
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" class="specs_basic specs_power specs_extreme">
+							passively cooled, super silent, very low power usage (25W at idle and 33W under load, apprx. €2,50/mth)
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" class="specs_basic specs_power specs_extreme">
+							protonet operating system:
+							<ul>
+								<li>the awesomest router/homeserver UI</li>
+								<li>zero config social networking right out of the box!</li>
+								<li>zero config filesharing for home or office</li>
+								<li>zero config group vpn (this ones in beta use right now but should be ready by the shipping date)</li>
+								<li>zero config awesome wifi management</li>
+								<li>the basis of all this is a ubuntu 10.04 server + protonet pixie dust</li>
+								<li>using all standard and open-source technologies</li>
+								<li>root access</li>
+								<li>access to all sources</li>
+								<li>awesome hackability</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">Intel Atom D410</td>
+						<td class="specs_power">Intel Atom D510</td>
+						<td class="specs_extreme">Intel Atom 330</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">1,66 GHz single core, two threads</td>
+						<td class="specs_power">1,66 GHz dual core, four threads</td>
+						<td class="specs_extreme">1,6 GHz dual core, four threads</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">
+							<ul>
+								<li>300mbit Wifi (b/g/n) with external high gain antenna</li>
+								<li>1 GB RAM</li>
+								<li>2 x SATA Ports</li>
+								<li>8 x USB 2.0</li>
+								<li>Audio I/O (speaker/line/mic)</li>
+								<li>VGA-Out</li>
+								<li>2 x Serial Ports</li>
+								<li>2 x PS/2</li>
+							</ul>
+						</td>
+						<td class="specs_power">
+							<ul>
+								<li>300mbit Wifi (b/g/n) with external high gain antenna</li>
+								<li>1 GB RAM</li>
+								<li>2 x SATA Ports</li>
+								<li>Mini PCI Express</li>
+								<li>8 x USB 2.0</li>
+								<li>Audio I/O (speaker/line/mic)</li>
+								<li>VGA-Out</li>
+								<li>Parallel and LPT port</li>
+								<li>2 x Serial Ports</li>
+								<li>2 x PS/2</li>
+							</ul>
+						</td>
+						<td class="specs_extreme">
+							<ul>
+								<li>300mbit Wifi (b/g/n) with external high gain antenna</li>
+								<li>2 GB RAM</li>
+								<li>4 x SATA Ports</li>
+								<li>1 x eSATA Port</li>
+								<li>1 x PCIe x16 PCI Slot</li>
+								<li>10 x USB 2.0</li>
+								<li>HDMI-Out</li>
+								<li>VGA-Out</li>
+								<li>S/PDIF-Out (optical)</li>
+								<li>Audio I/O (speaker/line/mic)</li>
+								<li>Bluetooth</li>
+								<li>2 x PS/2</li>
+								<li>IR remote control and receiver</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">Fast Ethernet</td>
+						<td colspan="2" class="specs_power specs_extreme">Gigabit Ethernet</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">500GB</td>
+						<td class="specs_power">2 x 500GB (RAID)</td>
+						<td class="specs_extreme">2 x 1TB (RAID)</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">extendable via USB, serial ports (and PS/2 :P)</td>
+						<td class="specs_power">this one's got an additional Mini PCI Express, parallel and LPT port, enjoy the Mini PCI Express port for all kinda great extensions</td>
+						<td class="specs_extreme">the extreme model is just that: extremely packed! With the added HDMI port and the NVidia Graphics Chip you can watch FULL HD stuff on this beast. The added SATA Ports allow up to four internal and an external eSATA drive. It comes with double the ram and bluetooth. Crazy!</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">color choice: Orange! (RAL2004)</td>
+						<td colspan="2" class="specs_power specs_extreme">color choice: Orange! (RAL2004) or Matté Black!</td>
+					</tr>
+					<tr>
+						<td class="specs_basic">€ 399,-</td>
+						<td class="specs_power">€499,-</td>
+						<td class="specs_extreme">€599,-</td>
+					</tr>
+				</table>
+			</div>
+		</div>
       </div>
       <div id="page-bottom">
         <p>Copyright 2010 / About / Sponsors / ... </p>
@@ -68,4 +236,5 @@
   </body>
   <script src="/javascripts/jquery-1.4.1.min.js" type="text/javascript"></script>
   <script src="/javascripts/clouds.js" type="text/javascript"></script>
+  <script src="/javascripts/shop.js" type="text/javascript"></script>
 </html>
