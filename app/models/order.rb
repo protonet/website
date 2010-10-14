@@ -17,6 +17,10 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def express_payer_id=(payer_id)
+    # dummy --> TODO: extend method with functionality!
+  end
+
   def price_in_cents
     (230*100).round
   end
