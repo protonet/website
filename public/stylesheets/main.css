@@ -10,19 +10,20 @@ div, ul, li				{ padding: 0; margin: 0; }
 			#logo h1						{ color: transparent; font-size: 0; font-weight: normal; }
 		#slogan								{ float: left; margin-left: 200px; padding: 30px 50px 10px; text-transform: uppercase; }
 	#page-middle							{ margin: 0 auto; width: 700px; clear: both; background-color: #fff; color: #425380; padding: 20px 0 30px; -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
-		#social-networks					{ text-align: right; margin: 10px 40px 0; }
-			#social-networks span			{ background-color: #fff; padding: 5px 10px; margin: 10px 0 10px 10px; }
+		#social-networks					{ text-align: right; margin: 0 40px; }
+			#social-networks span			{ background-color: #fff; border: 1px solid #dae4ff; padding: 5px 10px; margin: 10px 0 10px 10px; }
 		#abstract							{ margin: 25px 40px 15px; padding: 15px; background-color: #ff7f31; color: white; font-size: 150%; -moz-border-radius: 10px; border-radius: 10px; }
 			#abstract h2					{ text-transform: uppercase; font-weight: normal; font-size: 36px; margin: 0; }
 			#abstract p						{ font-weight: normal; font-size: 20px; margin: 0;}
 		#content							{ margin: 10px 40px; }
-			#tab-switcher					{ border-bottom: 1px solid #DAE4FF; margin: 0 0 10px; }
-				#tab-switcher .tab			{ border: 1px solid #DAE4FF; }
+			#tab-switcher					{ border-bottom: 1px solid #dae4ff; margin: 0 0 10px; }
+				#tab-switcher .tab			{ background-color: #fff; display: inline-block; padding: 10px; border: 1px solid #dae4ff; -moz-border-radius-topleft: 10px; border-top-left-radius: 10px; -moz-border-radius-topright: 10px; border-top-right-radius: 10px; }
+				#tab-switcher .active.tab	{ background-color: #ecf3fd; }
 			#info-picture					{ background-color: #fff; padding: 10px 0; -moz-border-radius: 10px; border-radius: 10px; }
 			#content-left					{ float: left; width: 320px; }
 				#content-left p				{ padding: 10px; }
 			#content-right					{ float: right; width: 275px; }
-				#content-right-balloon		{ margin: 50px 0 0; background-color: #dae4ff; padding: 5px 10px; -moz-border-radius: 10px; border-radius: 10px; }
+				#content-right-balloon		{ margin: 10px 0 0; background-color: #dae4ff; padding: 5px 10px; -moz-border-radius: 10px; border-radius: 10px; }
 				#balloon-cone				{ margin-top: -25px; width: 100%; height: 200px; background-image: url('/images/balloon-cone.png'); background-repeat: no-repeat; background-position: 20px 20px; }
 					#protonet-box			{ width: 100%; height: 100%; background-image: url('/images/protonet-box.png'); background-repeat: no-repeat; background-position: right center; }
 						#protonet-dude		{ width: 100%; height: 100%; background-image: url('/images/protonet-dude.png'); background-repeat: no-repeat; background-position: 25% 90%; }
@@ -38,12 +39,16 @@ div, ul, li				{ padding: 0; margin: 0; }
 
 .highlight				{ color: #ff7f31; }
 .clearer				{ clear: both; }
-.list-icon-divider		{ margin: 15px 0px; width: 100%; height: 1px; background-color: #85A7FF }
+.list-icon-divider		{ margin: 15px 0px; width: 100%; height: 1px; background-color: #85a7ff }
 .bold					{ font-weight: bold; }
 
 table					{ table-layout: fixed; width: 100%; border-collapse: collapse; }
 th, td					{ padding: 8px 10px; vertical-align: top; border: 1px solid #425380; }
+th						{ background-color: #cbdafb; }
+td						{ background-color: #ecf3fd; }
 table li				{ margin: 0 0 0 20px; }
-.highlight_specs		{ background-color: #fff; }
+.highlight_specs		{ background-color: #ff7f31; color: #fff; }
+.highlight_specs a		{ color: #fff; }
 
-.tab					{ display: inline-block; padding: 10px; }
+a						{ color: #ff7f31; }
+h2 a, h3 a				{ color: #425380; }

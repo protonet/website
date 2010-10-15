@@ -81,7 +81,14 @@ function highlightSpecs(type) {
 	$('.' + type).addClass('highlight_specs');
 }
 
-$(document).ready(function() {
+function changeTab(tab) {
+	$('.content-tab').hide();
+	$('#content-' + tab.attr('id')).show();
+	$('.tab').removeClass('active');
+	tab.addClass('active');
+}
+
+function shoppingBasket() {
 	//	update the total cost fields after page reload
 	updateTotalCost(['basic', 'power', 'extreme']);
 
@@ -100,11 +107,16 @@ $(document).ready(function() {
 	$('.order_type').click(function() {
 		highlightSpecs($(this).attr('id'));
 	});
+}
 
-
+function tabSwitcher() {
 	$('.tab').click(function() {
-		$('.content-tab').hide();
-		$('#content-' + $(this).attr('id')).show();
+		changeTab($(this));
 	});
 	$('#content-tab-2').hide();
+}
+
+$(document).ready(function() {
+	shoppingBasket();
+	tabSwitcher();
 });
