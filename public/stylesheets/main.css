@@ -17,8 +17,10 @@ div, ul, li				{ padding: 0; margin: 0; }
 			#abstract p						{ font-weight: normal; font-size: 20px; margin: 0;}
 		#content							{ margin: 10px 40px; }
 			#tab-switcher					{ border-bottom: 1px solid #dae4ff; margin: 0 0 10px; }
-				#tab-switcher .tab			{ background-color: #fff; display: inline-block; padding: 10px; border: 1px solid #dae4ff; -moz-border-radius-topleft: 10px; border-top-left-radius: 10px; -moz-border-radius-topright: 10px; border-top-right-radius: 10px; }
-				#tab-switcher .active.tab	{ background-color: #ecf3fd; }
+				#tab-switcher .tab			{ background-color: #fff; display: inline-block; position: relative; padding: 10px 12px; border: 1px solid #dae4ff; border-bottom: 0; -moz-border-radius-topleft: 10px; border-top-left-radius: 10px; -moz-border-radius-topright: 10px; border-top-right-radius: 10px; }
+				#tab-switcher .active.tab	{ background-color: #ecf3fd; z-index: 10; }
+				#tab-1						{ z-index: 6; }
+				#tab-2						{ z-index: 5; margin-left: -10px; }
 			#info-picture					{ background-color: #fff; padding: 10px 0; -moz-border-radius: 10px; border-radius: 10px; }
 			#content-left					{ float: left; width: 320px; }
 				#content-left p				{ padding: 10px; }
