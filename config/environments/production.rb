@@ -30,9 +30,10 @@ config.action_view.cache_template_loading            = true
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :production
   paypal_options = {
-    :login => "seller_1229899173_biz_api1.railscasts.com",
+    :login => "seller_1229899173_biz_api1.test.com",
     :password => "FXWU58S7KXFC6HBE",
     :signature => "AGjv6SW.mTiKxtkm6L9DcSUCUgePAUDQ3L-kTdszkPG8mRfjaRZDYtSu"
   }
-  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressDeGateway.new(paypal_options)
 end
+

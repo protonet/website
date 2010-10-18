@@ -19,9 +19,9 @@ config.action_mailer.raise_delivery_errors = false
 config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
   paypal_options = {
-    :login => "seller_1229899173_biz_api1.railscasts.com",
-    :password => "FXWU58S7KXFC6HBE",
-    :signature => "AGjv6SW.mTiKxtkm6L9DcSUCUgePAUDQ3L-kTdszkPG8mRfjaRZDYtSu"
+    :login => "info_1287433940_biz_api1.flyingseagull.de",
+    :password => "1287433949",
+    :signature => "AwK5ng60D6SPWvsXvKfTat.db4VKAQ8aWJlCWCTfHTcIAqJ.9oazD.r2"
   }
   ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
 end
