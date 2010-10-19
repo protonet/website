@@ -4,21 +4,33 @@ class OrdersController < ApplicationController
     power   = params[:power].to_i
     extreme = params[:extreme].to_i
     items = get_items(basic, power, extreme)
-    logger.info items.to_json
     amount = 399 * basic + 499 * power + 599 * extreme
+    redirect_to root_url if amount <= 0
+    order = Order.new(
+      :basic => basic,
+      :power => power,
+      :extreme => extreme)
+    order.save
     response = EXPRESS_GATEWAY.setup_purchase(
       amount * 100,
+      :order_id          => order.id,
       :items             => items,
       :ip                => request.remote_ip,
       :return_url        => new_order_url,
       :cancel_return_url => products_url
     )
-    logger.info response.params.to_json
-    redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
+    if response.success?
+      redirect_to EXPRESS_GATEWAY.redirect_url_for(response.token)
+    else
+      flash[:error] = "An error occurred contacting the PayPal Gateway"
+      redirect_to root_url
+    end
   end
 
   def new
-    @order = Order.new(:express_token => params[:token])
+    # invoice_id is the 
+    @order = Order.process(params[:token])
+    @order.save
   end
 
   private
