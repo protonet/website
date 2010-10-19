@@ -37,11 +37,11 @@ class Order < ActiveRecord::Base
   end
 
   def express_payer_id=(payer_id)
-    # dummy --> TODO: extend method with functionality!
+    write_attribute(:express_payer_id, payer_id)
   end
 
   def price_in_cents
-    (230*100).round
+    (amount*100).round
   end
 
   private
@@ -52,7 +52,6 @@ class Order < ActiveRecord::Base
 
   def express_purchase_options
     {
-      :ip => ip_address,
       :token => express_token,
       :payer_id => express_payer_id
     }

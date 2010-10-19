@@ -7,12 +7,13 @@ class OrdersController < ApplicationController
     amount = 399 * basic + 499 * power + 599 * extreme
     redirect_to root_url if amount <= 0
     order = Order.new(
+      :amount => amount,
       :basic => basic,
       :power => power,
       :extreme => extreme)
     order.save
     response = EXPRESS_GATEWAY.setup_purchase(
-      amount * 100,
+      order.price_in_cents,
       :order_id          => order.id,
       :items             => items,
       :ip                => request.remote_ip,
@@ -31,6 +32,16 @@ class OrdersController < ApplicationController
     # invoice_id is the 
     @order = Order.process(params[:token])
     @order.save
+  end
+
+  def update
+    @order = Order.find params[:id]
+    @order.purchase
+    redirect_to order_path(@order.id)
+  end
+
+  def show
+    @order = Order.find params[:id]
   end
 
   private
