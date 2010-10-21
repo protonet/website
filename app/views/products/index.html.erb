@@ -1,3 +1,114 @@
+<script type="text/javascript">
+Function.prototype.inheritsFrom = function( parentClassOrObject ){ 
+	if ( parentClassOrObject.constructor == Function ) 
+	{ 
+		//Normal Inheritance 
+		this.prototype = new parentClassOrObject;
+		this.prototype.constructor = this;
+		this.prototype.parent = parentClassOrObject.prototype;
+	} else { 
+		//Pure Virtual Inheritance 
+		this.prototype = parentClassOrObject;
+		this.prototype.constructor = this;
+		this.prototype.parent = parentClassOrObject;
+	} 
+	return this;
+}
+
+function Product (type) {
+}
+
+function BasicNode () {
+  this.name = 'Basic';
+  this.ram = 1;
+  this.hdd = 500;
+}
+
+
+BasicNode.inheritsFrom( Product );
+
+function PowerNode () {
+    this.name = 'Power';
+}
+
+BasicNode.prototype.renderHtml = function(){ 
+	return '<li>'+this.name+ramOptions+hddOptions+'<a href="#" class="removeProduct">del</a></li>';
+}
+
+
+PowerNode.inheritsFrom( BasicNode );
+
+function ExtremeNode () {
+  this.name = 'Power';
+  this.ram = 2;
+  this.hdd = 1000;
+
+}
+ExtremeNode.inheritsFrom( PowerNode );
+
+
+function Cart() {
+  this.products = [];
+}
+
+
+Cart.prototype.addProduct = function(pro) {
+  switch (pro) {
+    case 'BasicNode': p = new BasicNode(); break;
+    case 'PowerNode': p = new PowerNode(); break;
+    case 'ExtremeNode': p = new ExtremeNode(); break;
+  }
+  // p = new JSObject(pfro);
+  this.products.push(p);
+  return p;
+}
+Product.prototype.setRam = function(ram) {
+  this.ram = ram;
+};
+
+cart = new Cart();
+
+$(document).ready(function() {
+  $("#cart").hide();
+  //toggle the componenet with class msg_body
+  $(".add").click(function()
+  {
+    $("#cart").slideDown(500);
+    p = cart.addProduct($(this).parent().parent().attr('id'));
+
+    ph = $('.templateProduct').clone().removeClass().show();
+    ph.find('.product_name').html(p.name);
+    ph.find('.product_ram').val(p.ram);
+    ph.find('.product_hdd').val(p.hdd);
+    
+    ph.append('<input type="hidden" name="name[]" value="'+p.name+'" /><input type="hidden" name="price[]" value="201" />')
+    
+    
+    $("#order_list").append(ph);
+    
+    cart.products[0].setRam += 10;
+
+    // add remove click to recently added product
+    $(".removeProduct").click(function() {
+      $(this).parent().remove();
+      renumber();
+      return false;
+    });
+
+    renumber();
+    return false;
+  });
+
+function renumber() {
+  $.each($('.product_number'), function (index, inputelement) {
+    inputelement.value = index;
+    $(inputelement).parent().find('.product_number').html(index + '.');
+  });
+}
+
+});
+</script>
+
           <div id="tab-switcher">
             <div id="tab-1" class="active tab">
               Buy
@@ -8,62 +119,58 @@
           </div>
           <div id="content-tab-1" class="content-tab">
             <div id="content-left">
-              <% form_tag("/orders/new/express", :id => 'buy_form', :method => :get) do -%>
-                <div class="bold">
-                  <span class="order_type">Option</span>
-                  <span class="order_single_price">Price</span>
-                  <span class="order_count">Amount</span>
-                  <span class="order_total_price">Total</span>
-                </div>
-                <div class="specs_basic">
-                  <span class="order_type" id="specs_basic"><a href="#specifications" title="show specs">Basic</a></span>
-                  <span class="order_single_price"><span id="single_price_basic">399</span> EUR</span>
-                  <span class="order_count">
-                    <select id="order_count_basic" name="basic">
-                      <option value="0">- none -</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="10">many</option>
-                    </select>
-                  </span>
-                  <span class="order_total_price"><span id="total_price_basic">0</span> EUR</span>
-                </div>
-                <div class="specs_power">
-                  <span class="order_type" id="specs_power"><a href="#specifications" title="show specs">Power</a></span>
-                  <span class="order_single_price"><span id="single_price_power">499</span> EUR</span>
-                  <span class="order_count">
-                    <select id="order_count_power" name="power">
-                      <option value="0">- none -</option>
-                      <option value="1" selected="selected">1</option>
-                      <option value="2">2</option>
-                      <option value="10">many</option>
-                    </select>
-                  </span>
-                  <span class="order_total_price"><span id="total_price_power">0</span> EUR</span>
-                </div>
-                <div class="specs_extreme">
-                  <span class="order_type" id="specs_extreme"><a href="#specifications" title="show specs">Extreme</a></span>
-                  <span class="order_single_price"><span id="single_price_extreme">599</span> EUR</span>
-                  <span class="order_count">
-                    <select id="order_count_extreme" name="extreme">
-                      <option value="0">- none -</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="10">many</option>
-                    </select>
-                  </span>
-                  <span class="order_total_price"><span id="total_price_extreme">0</span> EUR</span>
-                </div>
+              <div id="products">
+                <table border="0" cellspacing="5" cellpadding="5">
+                  <tr id="BasicNode">
+                    <th>Basic</th>
+                    <td>399 EUR</td>
+                    <td><a class="add">Add</a></td>
+                  </tr>
+                  <tr id="PowerNode">
+                    <th>Power</th>
+                    <td>499 EUR</td>
+                    <td><a class="add">Add</a></td>
+                  </tr>
+                  <tr id="ExtremeNode">
+                    <th>Extreme</th>
+                    <td>599 EUR</td>
+                    <td><a class="add">Add</a></td>
+                  </tr>
+                </table>
+              </div>
+              
                 <div class="bold">
                   <span class="order_type">&nbsp;</span>
                   <span class="order_single_price">&nbsp;</span>
                   <span class="order_count">&nbsp;</span>
                   <span class="order_total_price"><span id="total_price">0</span> EUR</span>
                 </div>
-                <%= image_submit_tag("https://www.paypal.com/de_DE/i/btn/btn_xpressCheckout.gif") %>
-              <% end -%>
             </div>
             <div id="content-right">
+              <div id="cart">
+                
+                <li class="templateProduct" style="display: none;">
+                  <span class="product_number"></span>
+                  <span class="product_name"></span>
+                  <select class="product_ram"><option value="1">1</option><option value="2">2</option></select>
+                  <select class="product_hdd"><option value="500">500</option><option value="750">750</option><option value="1000">1000</option></select>
+                  <span class="procuct_price"></span>
+                  <a href="" class="removeProduct">remove</a>
+                </li>
+
+                <% form_tag("/orders/new/express", :id => 'buy_form', :method => :get) do -%>
+
+                <ul id="order_list">
+                </ul>
+                
+                <br />
+                total: <span name="total"></span>
+                
+                <%= image_submit_tag("https://www.paypal.com/de_DE/i/btn/btn_xpressCheckout.gif") %>
+                <% end -%>
+                
+                
+              </div>
               <div id="content-right-balloon">
                 <p>
                 Did you know that protonet nodes can be coupled to create a bigger distributed social network?<br/>
