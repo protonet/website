@@ -1,0 +1,2 @@
+class Power < LineItem
+end

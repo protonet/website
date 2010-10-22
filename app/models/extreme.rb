@@ -1,0 +1,2 @@
+class Extreme < LineItem
+end

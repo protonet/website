@@ -9,10 +9,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string :street1
       t.string :street2
       t.string :postal_code
-      t.decimal :amount, :precision => 10, :scale => 2
-      t.integer :basic
-      t.integer :power
-      t.integer :extreme
+      t.decimal :total_amount, :precision => 10, :scale => 2
       t.string :express_token
       t.string :express_payer_id
       t.boolean :processed, :default => false
