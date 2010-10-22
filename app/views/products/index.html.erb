@@ -81,7 +81,7 @@
       ph.find('.product_ram').val(p.ram);
       ph.find('.product_hdd').val(p.hdd);
 
-      ph.append('<input type="hidden" name="name[]" value="'+p.name+'" /><input type="hidden" name="price[]" value="201" />')
+      ph.append('<input type="hidden" name="type[\''+p.name+'\'][][\'options\']" value="0" />')
 
 
       $("#order_list").append(ph);
