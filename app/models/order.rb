@@ -22,7 +22,10 @@ class Order < ActiveRecord::Base
 
   def purchase
     response = process_purchase
-    transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
+    transactions.create!(
+      :action => "purchase",
+      :amount => price_in_cents,
+      :response => response)
     response.success?
   end
 
@@ -44,6 +47,23 @@ class Order < ActiveRecord::Base
     (amount*100).round
   end
 
+  def items
+    items = []
+    items << { :name => 'Protonet Basic',
+      :quantity => basic,
+      :description => 'Basic setup',
+      :amount => 399 * 100 } if basic > 0
+    items << { :name => 'Protonet Power',
+      :quantity => power,
+      :description => 'Power setup',
+      :amount => 499 * 100 } if power > 0
+    items << { :name => 'Protonet Extreme',
+      :quantity => extreme,
+      :description => 'Extreme setup',
+      :amount => 599 * 100 } if extreme > 0
+    items
+  end
+
   private
 
   def process_purchase
@@ -52,6 +72,7 @@ class Order < ActiveRecord::Base
 
   def express_purchase_options
     {
+      :items => items,
       :token => express_token,
       :payer_id => express_payer_id
     }

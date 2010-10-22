@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
     basic   = params[:basic].to_i
     power   = params[:power].to_i
     extreme = params[:extreme].to_i
-    items = get_items(basic, power, extreme)
     amount = 399 * basic + 499 * power + 599 * extreme
     redirect_to root_url if amount <= 0
     order = Order.new(
@@ -15,7 +14,7 @@ class OrdersController < ApplicationController
     response = EXPRESS_GATEWAY.setup_purchase(
       order.price_in_cents,
       :order_id          => order.id,
-      :items             => items,
+      :items             => order.items,
       :ip                => request.remote_ip,
       :return_url        => new_order_url,
       :cancel_return_url => products_url
@@ -44,21 +43,4 @@ class OrdersController < ApplicationController
     @order = Order.find params[:id]
   end
 
-  private
-  def get_items(basic, power, extreme)
-    items = []
-    items << { :name => 'Protonet Basic',
-      :quantity => basic,
-      :description => 'Basic setup',
-      :amount => 399 * 100 } if basic > 0
-    items << { :name => 'Protonet Power',
-      :quantity => power,
-      :description => 'Power setup',
-      :amount => 499 * 100 } if power > 0
-    items << { :name => 'Protonet Extreme',
-      :quantity => extreme,
-      :description => 'Extreme setup',
-      :amount => 599 * 100 } if extreme > 0
-    items
-  end
 end
