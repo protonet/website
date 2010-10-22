@@ -19,7 +19,7 @@
   }
 
   function BasicNode () {
-    this.name = 'Basic';
+    this.name = 'basic';
     this.ram = 1;
     this.hdd = 500;
   }
@@ -28,7 +28,7 @@
   BasicNode.inheritsFrom( Product );
 
   function PowerNode () {
-    this.name = 'Power';
+    this.name = 'power';
   }
 
   BasicNode.prototype.renderHtml = function(){ 
@@ -39,7 +39,7 @@
   PowerNode.inheritsFrom( BasicNode );
 
   function ExtremeNode () {
-    this.name = 'Power';
+    this.name = 'extreme';
     this.ram = 2;
     this.hdd = 1000;
 
