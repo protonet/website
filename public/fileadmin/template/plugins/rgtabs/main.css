@@ -1,0 +1,119 @@
+/***************************
+*  Template by zeitspringer
+***************************/  
+
+/* wraps the hole tab */
+.rgtabs-wrapper {
+  padding: 10px 15px;
+  margin: 0 0 20px 0;
+  background:#fff url(teaser_background.gif) bottom left no-repeat;
+  overflow:hidden;
+  clear:both;
+  /* min-height: 400px; */
+  width: 870px;
+}
+
+/* add a loading icon */
+.rgtabs-wrapper .rgtabs-ajax-loading {
+  padding: 170px 0;
+  background: url(ajax-loader.gif) no-repeat center;
+}
+
+/* Tab-Menu ul */
+.rgtabs-menu  {
+  margin: 0 0 0 0;
+  padding: 0px;
+  height: 60px;
+  width: auto;
+  list-style: none;
+}
+
+/* Tab-Menu li */
+.rgtabs-menu  li, #left .rgtabs-menu  li {
+  width: 180px;
+  list-style-type: none;
+  list-style: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+}	
+
+/* Tab-Menu li.a */
+.rgtabs-menu  li a, #left .rgtabs-menu  li a {
+  width: 100%;
+  vertical-align: top;
+  display: block;
+  float: left;
+  height: 50px;
+  color: #fff;
+  font-family: arial;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0;
+  text-decoration: none;
+  outline:0;
+}
+
+/* Tabs */
+
+.rgtabs-menu .tabfirst {
+  background: url(subnavi_first.gif);
+}
+
+.rgtabs-menu .tabmiddle {
+  background: url(subnavi_middle.gif);
+}
+
+.rgtabs-menu .tablast {
+  background: url(subnavi_last.gif);
+  background-position: right top;
+}
+
+.rgtabs-menu-3  li, #left .rgtabs-menu-3  li {
+	width: 300px;
+}
+
+.rgtabs-menu-3 .tabfirst {
+  background: url(subnavi_first_3.gif);
+}
+
+.rgtabs-menu-3 .tabmiddle {
+  background: url(subnavi_middle_3.gif);
+}
+
+.rgtabs-menu-3 .tablast {
+  background: url(subnavi_last_3.gif);
+  background-position: right top;
+}
+
+
+/* Hovered Tab */
+
+.rgtabs-menu  .tabfirst:hover, 
+.rgtabs-menu  .tabfirst:focus, 
+.rgtabs-menu  .tabmiddle:hover, 
+.rgtabs-menu  .tabmiddle:focus, 
+.rgtabs-menu  .tablast:hover, 
+.rgtabs-menu  .tablast:focus {
+  background-position: 0px 60px;
+}
+
+/* Selected Tab */
+
+.rgtabs-menu  .rgtabs-selected {
+  background-position: 0px 120px!important;
+}
+
+/* Next / Prev nav */
+.rgtabs-pageswrapper {
+	display:block;
+}
+
+/* Trenner */
+.csc-frame-rulerBefore {
+  background: url(trenner.png) top left repeat-x;
+  padding-top: 20px;
+}

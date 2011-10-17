@@ -1,0 +1,24 @@
+.mailformplus_contactform .error {
+	color:#dd7777;
+}
+
+.mailformplus_contactform LABEL {
+	font-weight:bold;
+	display:block;
+	float:left;
+	width:100px;
+}
+
+.mailformplus_contactform .radio_caption {
+	display:inline;
+	width:auto;
+	float:none;
+	font-weight:normal;
+	padding-left:5px;
+}
+
+.mailformplus_contactform .caption {
+	margin:10px 0 5px 0;
+	font-weight:bold;
+	
+}

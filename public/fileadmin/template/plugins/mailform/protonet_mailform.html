@@ -1,0 +1,108 @@
+<-- ###TEMPLATE_FORM### begin -->
+<div class="mailformplus_contactform">
+###ERROR###
+<form name="contact_form" method="post" action="###REL_URL###">
+	<fieldset>
+		<input type="hidden" name="id" value="###PID###" />
+		<input type="hidden" name="submitted" value="1" />
+		<input type="hidden" name="L" value="###value_L###" />
+		<input type="hidden" name="type" value="###value_type###" />
+		<div>
+			<label for="name">###LLL:name######required_name###</label>
+			<input type="text" name="name" id="name" value="###value_name###"/>
+			<br/>
+			<label for="subject">###LLL:subject###</label>
+			<input type="text" name="subject" id="subject" value="###value_subject###"/>
+			<br/>
+			<label for="email">###LLL:email######required_name###</label>
+			<input type="text" name="email" id="email" value="###value_email###"/>
+			<br/>
+			<label for="phone">###LLL:phone###</label>
+			<input type="text" name="phone" id="phone" value="###value_phone###"/>
+			<br/>
+			<label for="text">###LLL:text######required_name###</label>
+			<textarea cols="50" rows="5" name="text" id="text" style="width:320px;">###value_text###</textarea>
+			<br/>
+			<div class="caption">###LLL:contact_via###</div>
+			<input type="radio" name="contact_via" value="email" id="contact_email" style="border-style:none;" ###checked_contact_via_email### /><label class="radio_caption" for="contact_email">###LLL:contact_via_email###</label><br />
+			<input type="radio" name="contact_via" value="phone" id="contact_phone" style="border-style:none;" ###checked_contact_via_phone### /><label class="radio_caption" for="contact_phone">###LLL:contact_via_phone###</label>
+			<br/>
+			<p>###LLL:required_fields###</p>
+			<input type="submit" value="###LLL:submit###"/>
+		</div>
+	</fieldset>
+</form>
+</div>
+<!-- ###TEMPLATE_FORM### end -->
+
+<!-- ###TEMPLATE_SUBMITTED_OK### begin
+  OPTIONAL - will be shown if form was submitted and all required fields were filled out
+-->
+###LLL:thank_you###
+
+<!-- ###TEMPLATE_SUBMITTED_OK### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_USER### begin
+    OPTIONAL - this will be the email text that is sent to the user (plaintext!)
+-->
+Hello ###name### (plain),
+You have just filled out the form and asked about: ###subject###
+
+We will contact you as soon as possible,
+ciao!
+<!-- ###TEMPLATE_EMAIL_USER### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_USER_HTML### begin
+    OPTIONAL - this will be the email text that is sent to the user (html!)
+-->
+Hello ###name### (html),<br/>
+You have just filled out the form and asked about: ###subject###<br/>
+We will contact you as soon as possible,<br/>
+ciao!
+<!-- ###TEMPLATE_EMAIL_USER_HTML### end -->
+
+
+
+
+
+<!-- ###TEMPLATE_EMAIL_RECEIVER### begin
+    OPTIONAL - this will be the email text that is sent to the admin (html!)
+    (admin-email = the email you can specify in the mailformplus plugin)
+-->
+Hello admin (plain),
+A user just filled out the form:
+name: ###name###
+subject: ###subject###
+email: ###email###
+phone: ###phone###
+text: ###text###
+contact via: ###contact_via###
+<!-- ###TEMPLATE_EMAIL_RECEIVER### end -->
+
+
+<!-- ###TEMPLATE_EMAIL_RECEIVER_HTML### begin
+    OPTIONAL - this will be the email text that is sent to the admin (plaintext!)
+    (admin-email = the email you can specify in the mailformplus plugin)
+-->
+Hello admin (html),<br/>
+A user just filled out the form:<br/>
+name: ###name###<br/>
+subject: ###subject###<br/>
+email: ###email###<br/>
+phone: ###phone###<br/>
+text: ###text###<br/>
+contact via: ###contact_via###
+<!-- ###TEMPLATE_EMAIL_RECEIVER_HTML### end -->
+
+
+
+
+<!-- ###TEMPLATE_ERROR### begin -->
+<!-- ###ERROR_START### begin 
+this is used for the global error marker ###ERROR### -->
+The following errors occured:<br/>
+<!-- ###ERROR_START### end -->
+
+<!-- ###TEMPLATE_ERROR### end -->
