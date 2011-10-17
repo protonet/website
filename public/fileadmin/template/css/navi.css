@@ -37,6 +37,8 @@
 #navi-main li a {
 	background-position: 0 -3px;
 	margin: 0 24px 0 0;
+	font-family: ptn_font, Arial, sans-serif;
+	font-size: 16px;
 }
 
 #navi-main li.last a {

@@ -342,9 +342,10 @@ h1.gfx {
   margin-right: 0px !important;
 }
 
-.start-teaser h1.gfx {
+.start-teaser h1 {
   margin: -5px 0 0 0;
-  width: 250px;
+  font-family: ptn_font, Arial, sans-serif;
+  font-size: 16px;
 }
 
 /************ MULTI-COLUMN CONTAINER *************/

@@ -21,6 +21,12 @@ body.body-content #wrapper-content {
 	width: 900px;
 }
 
+@font-face {
+font-family: ptn_font;
+src: url('ulc_font.ttf');
+font-style: normal;
+font-weight: normal;
+}
 
 /******************* TEXT ************************/
 /************************************************/
