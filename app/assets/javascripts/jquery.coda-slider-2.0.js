@@ -4,18 +4,18 @@
 	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
 */
 
-$(function(){
+jQuery(document).ready(function($){
 	// Remove the coda-slider-no-js class from the body
-	$("body").removeClass("coda-slider-no-js");
+  $("body").removeClass("coda-slider-no-js");
 	// Preloader
-	$(".coda-slider").children('.panel').hide().end().prepend('<p class="loading">Loading...<br /><img src="images/ajax-loader.gif" alt="loading..." /></p>');
+  $(".coda-slider").children('.panel').hide().end().prepend('<p class="loading">Loading...<br /><img src="images/ajax-loader.gif" alt="loading..." /></p>');
 });
 
 var sliderCount = 1;
 
-$.fn.codaSlider = function(settings) {
+jQuery.fn.codaSlider = function(settings) {
 
-	settings = $.extend({
+	settings = jQuery.extend({
 		autoHeight: true,
 		autoHeightEaseDuration: 1000,
 		autoHeightEaseFunction: "easeInOutExpo",
