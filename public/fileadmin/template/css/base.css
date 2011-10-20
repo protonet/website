@@ -59,7 +59,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	height: 50px;
-	margin-bottom: .75em;
+	margin-top: .3em;
+	margin-bottom: .3em;
+	font-family: ptn_font, Arial, sans-serif;
+	font-size: 46px;
+	color: #444;
 }
 
 h2 {
