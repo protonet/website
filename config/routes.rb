@@ -12,7 +12,10 @@ ProtonetHomepage::Application.routes.draw do
   match 'box_base'          => 'content#box_base'
   match 'box_power'         => 'content#box_power'
   match 'box_business'      => 'content#box_business'
-  match 'store'             => 'content#store'
+  match 'buy'               => 'content#buy'
+  match 'support'           => 'content#support'
+  match 'contact'           => 'content#contact'
+  match 'imprint'           => 'contact#imprint'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
