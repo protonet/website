@@ -1,15 +1,15 @@
     jQuery.fn.exists = function(){return jQuery(this).length>0;}
 
-    $(document).ready(function() {
+    jQuery(document).ready(function() {
     
     	/* DUDES IN SLIDER */
     
-        $('.tx-ttaddress-pi1').eq(0).codaSlider({
+        jQuery('.tx-ttaddress-pi1').eq(0).codaSlider({
           dynamicTabs: 0,
           dynamicArrowLeftText: "&#171; Back",
           dynamicArrowRightText: "More dudes &#187;"
         });
-        $('.vcard').css('margin-right','15px');
+        jQuery('.vcard').css('margin-right','15px');
 
 
     	/* DISPLAY 6 DISTRIBUTORS ONLY IN RANDOM ORDER */
@@ -23,29 +23,29 @@
 	var res = new Array();
 
 	// shuffle items and remove clearbreak
-	var divs = $('.vcard_small').get().sort(function(){
+	var divs = jQuery('.vcard_small').get().sort(function(){
 		return Math.round(Math.random())-0.5; //so we get the right +/- combo
 	   }).slice(0,num);
-   	if ($('.vcard_small').exists()) {
-		$(divs).appendTo(divs[0].parentNode).show();
+   	if (jQuery('.vcard_small').exists()) {
+		jQuery(divs).appendTo(divs[0].parentNode).show();
 	}
-	$('.tx-ttaddress-pi1 .cb').remove();
+	jQuery('.tx-ttaddress-pi1 .cb').remove();
 	
 	// add clearbreak for every line
-	for(i = -1; i<num; i=i+itmsRow) { $('.vcard_small:eq(i)').append('<div class="cb"></div>'); }
-	$('.vcard_small').width(270);
+	for(i = -1; i<num; i=i+itmsRow) { jQuery('.vcard_small:eq(i)').append('<div class="cb"></div>'); }
+	jQuery('.vcard_small').width(270);
 	
 	// determine height for parent container
 	for(i=0;i<numLines;i++) {
 		var h = 0;
 		ju = itmsRow * (i + 1);
 		jl = itmsRow * (i);
-		$('.vcard_small:visible').each(function() { h = Math.max($(this).height(),h); });
+		jQuery('.vcard_small:visible').each(function() { h = Math.max(jQuery(this).height(),h); });
 		res[i] = h;
 	}
 	for(var r in res) {	if(!isNaN(parseInt(res[r]))) height = height + res[r]; }
-	$('.vcard_small').parent().height(height);
+	jQuery('.vcard_small').parent().height(height);
 	
 	// add clearbreak at last
-	$('.vcard_small').parent().append('<div class="cb"></div>');
+	jQuery('.vcard_small').parent().append('<div class="cb"></div>');
       });
