@@ -5,13 +5,11 @@
 // the compiled file.
 //
 //= require jquery
-// require jquery_ujs
+//= require jquery_ujs
 //= require jquery-1.5.min
+//= require jquery.coda-slider-2.0
 //= require jquery.easing.1.3
 //= require jquery.uniform.min
-//= require jquery.coda-slider-2.0
-//= require mootools
-//= require rgtabs
 //= require zs
 // require_tree .
 
