@@ -6,61 +6,46 @@
 /******************* NAVI: MAIN ******************/
 /************************************************/
 
-#wrapper-navi-main {
-	height: 66px;
-	padding: 0 0 0 10px;
-	float: right;
-}
-
 #navi-main {
-	margin: 0 0 0 0;
-	padding: 0 10px 0 0;
+	height: 66px;
+	margin: 0;
+	padding: 0 10px;
 	background: url(/assets/bg-navi-main-end.png) 100% 0 no-repeat;
 	height: 66px;
 	float: right;
+	clear: right;
 }
 
 #navi-main li {
 	list-style-type: none;
-	margin: 0 0 0 0;
-	padding: 24px 0 0 0;
+	margin: 0;
+	padding: 24px 24px 0 0;
 	float: left; 
 	height: 43px;
 	background: url(/assets/bg-navi-main.png) 0 0 repeat-x;
 }
 
-#navi-main li.first {
+#navi-main li:first-child {
 	padding-left: 30px;
 	background: url(/assets/bg-navi-main-start.png) 0 0 no-repeat;
 }
 
 #navi-main li a {
-	background-position: 0 -3px;
-	margin: 0 24px 0 0;
 	font-family: ptn_font, Arial, sans-serif;
 	font-size: 22px;
-}
-
-#navi-main li.last a {
-	margin: 0 23px 0 0;	
-}
-
-#navi-main li a:hover,
-#navi-main li a.active {	
-	background-position: 0 -28px;
 }
 
 /******************* NAVI: META + FOOTER *********/
 /************************************************/
 
-#wrapper-navi-meta {
+#navi-meta {
 	height: 41px;
-	width: 100%;
+	margin: 0;
 	padding: 11px 0 0 0;
+	float: right;
 }
 
-#navi-footer,
-#navi-meta {
+#navi-footer {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
 	float: right;

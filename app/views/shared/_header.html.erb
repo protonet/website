@@ -1,24 +1,19 @@
-<div id="wrapper-shadow">
-  <div id="wrapper-shadow-top">
-    <div id="wrapper-main">
-      <div id="wrapper-header" class="clearfix">
-        <div id="wrapper-logo">
-          <a href="index.php?id=1"><img src="fileadmin/template/images/logo-protonet.png" alt="Protonet" title="Protonet" /></a>
-        </div>
+  <div id="wrapper-shadow">
+    <div id="wrapper-shadow-top">
+      <div id="header">
+        <%=link_to image_tag('logo.png', :id => 'logo'), root_path %>
         
-        <div id="wrapper-navi-meta">
-          <ul id="navi-meta"><li><a href="index.php?id=16" title="Datenschutz" onfocus="blurLink(this);">Datenschutz</a></li></ul>
-        </div>   
+        <ul id="navi-meta">
+          <li><%=link_to 'Datenschutz', '#' %></li>
+        </ul>
         
-        <div id="wrapper-navi-main">
-          <ul id="navi-main" class="clearfix">
-            <li class="first"><a href="/" title="home">home</a></li>
-            <li><a href="<%= protonet_path %>" title="protonet">the protonet</a></li>
-            <li><a href="<%= box_path %>" title="the box">the box</a></li>
-            <li><a href="<%= team_path %>" title="the team">the team</a></li>
-            <li><a href="<%= support_path %>" title="support">support</a></li>
-            <li><a href="<%= buy_path %>" title="store">buy</a></li>
-          </ul>
-        </div>
+        <ul id="navi-main">
+          <li><%=link_to 'home', root_path %></li>
+          <li><%=link_to 'the protonet', protonet_path %></li>
+          <li><%=link_to 'the box', box_path %></li>
+          <li><%=link_to 'the team', team_path %></li>
+          <li><%=link_to 'support', support_path %></li>
+          <li><%=link_to 'buy', buy_path %></li>
+        </ul>
       </div>
 

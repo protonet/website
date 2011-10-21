@@ -1,24 +1,12 @@
-      <div id="wrapper-footer-bg">
-        <div id="wrapper-footer">
-          <div id="wrapper-navi-footer">
-            <ul id="navi-footer">
-              <li>
-                <a href="http://blog.protonet.info" title="Blog" onfocus="blurLink(this);">Blog</a>
-              </li>
-              <li>
-                <a href="<%= contact_path %>" title="Kontakt" onfocus="blurLink(this);">Kontakt</a>
-              </li>
-              <li>
-                <a href="<%= imprint_path %>" title="Impressum" onfocus="blurLink(this);">Impressum</a>
-              </li>
-            </ul>
-          </div>
-          
-          <p>&copy; copyright Protonet 2011</p>
-
-        </div>
+      <div id="footer">
+        <ul id="navi-footer">
+          <li><%=link_to 'Blog', 'http://blog.protonet.info' %></li>
+          <li><%=link_to 'Contact', contact_path %></li>
+          <li><%=link_to 'Impressum', imprint_path %></li>
+        </ul>
+        
+        <p>&copy; copyright Protonet 2011</p>
       </div>
     </div>
   </div>
-</div>
 

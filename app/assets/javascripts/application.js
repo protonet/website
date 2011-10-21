@@ -4,12 +4,8 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-1.5.min
-//= require jquery.coda-slider-2.0
-//= require jquery.easing.1.3
-//= require jquery.uniform.min
-//= require zs
-// require_tree .
+//= require_tree ./application
 
+jQuery(document).ready(function() {
+  jQuery("select, input:checkbox, input:radio, input:file").uniform();
+});

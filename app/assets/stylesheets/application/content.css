@@ -2,11 +2,31 @@
  * content elements
  *
  */
- 
- .csc-default {
-   clear: both;
- }
- 
+
+#header, #content, #footer {
+  width: 940px;
+  padding: 0 20px 20px 20px;
+  position: relative;
+  z-index: 99;
+  background-color: #fff;
+}
+
+#header {
+  padding: 0 20px;
+  height: 138px;
+  background: url(/assets/bg-wrapper-header.png) 0 0 repeat-x;
+}
+
+#footer {
+  border-top: 1px solid #bfbfbf;
+  padding-top: 20px;
+}
+#footer p {
+  font-size: .92em;
+  margin: 0;
+}
+
+
 /******************* BASIC ***********************/
 /************************************************/
 
@@ -22,13 +42,6 @@
   padding: 0 29px;
 }
 
-#wrapper-main {
-  width: 980px;
-  padding: 0px 0px;  
-  margin: 0 auto;
-  background: url(/assets/bg-wrapper-header.png) 0 0 repeat-x;
-}
-
 h1.gfx {
   margin-top: 40px;
 }
@@ -36,45 +49,13 @@ h1.gfx {
 /******************* HEADER **********************/
 /************************************************/
 
-#wrapper-header {
-  height: 138px;
-  width: 940px;
-  padding: 0px 20px;
-  position: relative;
-  z-index: 99;
-}
-
-#wrapper-logo {
+#logo {
   position: absolute;
   left: -29px;
   top: 10px;
   width: 258px;
   height: 128px;
 }
-
-
-/******************* FOOTER **********************/
-/************************************************/
-
-#wrapper-footer-bg {
-  background-color: #fff;
-  padding: 0px 20px;
-  margin: 0px;
-}
-
-#wrapper-footer {
-  background-color: #fff;
-  border-top: 1px solid #bfbfbf;
-  height: 36px;
-  width: 940px;
-  padding: 20px 0px 0px 0px;
-  margin: 0px;
-}
-
-#wrapper-footer p {
-  font-size: .92em;
-}
-
 
 /******************* TEASER**********************/
 /************************************************/
@@ -254,13 +235,6 @@ h1.gfx {
 
 /******************* CONTENT *********************/
 /************************************************/
-
-#wrapper-content {
-  background-color: #fff;
-  padding: 0px 20px 20px 20px;
-  width: 940px; /* 896 */
-  overflow: hidden;
-}
 
 .dudes {
   margin: 0 0 2em 0;
