@@ -1,83 +1,36 @@
-<%= render :partial => "shared/header" %>
-          
-  <!--  CONTENT ELEMENT, uid:87/list [begin] -->
-    <div id="c87" class="csc-default">
-    <!--  Plugin inserted: [begin] -->
-      <div class="tx-ghrandomcontent-pi1">
-  <!--  CONTENT ELEMENT, uid:86/html [begin] -->
-    <div id="c86" class="csc-default" >
-    <!--  Raw HTML content: [begin] -->
-      <!-- wrapper-start-box begin -->
-          <div id="wrapper-start-box">
-            <img src="fileadmin/template/images/_TEMP/start-teaser-1.jpg" alt="TEMP" />
-          </div>
-          <!-- wrapper-start-box end -->
-    <!--  Raw HTML content: [end] -->
-      </div>
-  <!--  CONTENT ELEMENT, uid:86/html [end] -->
-    </div>
-    <!--  Plugin inserted: [end] -->
-      </div>
-  <!--  CONTENT ELEMENT, uid:87/list [end] -->
-    
-          <!-- wrapper-start-teaser begin -->
-          <div id="wrapper-start-teaser" class="clearfix">
-            <div class="start-teaser">
-              
-  <!--  CONTENT ELEMENT, uid:72/list [begin] -->
-    <div id="c72" class="csc-default"><h1>aktuelle NEWS</h1>
-    <!--  Plugin inserted: [begin] -->
-      
-<div class="news-latest-container">
-  
-      <div class="news-latest-item">
-        <span class="news-latest-date">16.03.2011 16:47</span>
-        <h2><a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=2&amp;cHash=1816d326ded8d52a8466f4d86ec40821" title="Second zeitspringer test">Second zeitspringer test</a></h2>
-        <a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=2&amp;cHash=1816d326ded8d52a8466f4d86ec40821" title="Second zeitspringer test"></a>
-        <a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=2&amp;cHash=1816d326ded8d52a8466f4d86ec40821" title="Second zeitspringer test"><p>Second test sub</p></a><hr class="clearer" />
-        <div class="news-latest-category"> Cat: Zeitspringer  </div>
-      </div>
-    
-      <div class="news-latest-item">
-        <span class="news-latest-date">16.03.2011 12:38</span>
-        <h2><a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=1&amp;cHash=7fe47962cdd4ecd83a699495fbabf59c" title="Zeitspringer test">Zeitspringer test</a></h2>
-        <a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=1&amp;cHash=7fe47962cdd4ecd83a699495fbabf59c" title="Zeitspringer test"></a>
-        <a href="index.php?id=28&amp;tx_ttnews%5Btt_news%5D=1&amp;cHash=7fe47962cdd4ecd83a699495fbabf59c" title="Zeitspringer test"><p>Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies...</p></a><hr class="clearer" />
-        <div class="news-latest-category"> Cat: Zeitspringer  </div>
-      </div>
-    
-<div class="news-latest-gotoarchive">go to Archive -></div>
+<% content_for :wrapper, 'index' -%>
+
+<div class="tx-ghrandomcontent-pi1" id="wrapper-start-box">
+  <img src="fileadmin/template/images/_TEMP/start-teaser-1.jpg" />
 </div>
 
-    <!--  Plugin inserted: [end] -->
+<div id="wrapper-start-teaser" class="clearfix">
+  <div class="start-teaser">
+    <h1>aktuelle NEWS</h1>
+
+    <div class="news-latest-container">
+      <div class="news-latest-item">
+        <span class="news-latest-date">16.03.2011 16:47</span>
+        <a href="#"><p>Second test sub</p></a>
+        <hr class="clearer" />
       </div>
-  <!--  CONTENT ELEMENT, uid:72/list [end] -->
-    
-            </div>
-            <div class="start-teaser">
-              
-  <!--  CONTENT ELEMENT, uid:71/text [begin] -->
-    <div id="c71" class="csc-default"><h1>protonet PRIVAT</h1>
-    <!--  Text: [begin] -->
-      <p class="bodytext">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est Lorem ipsum dolor sit amet lorem ipsum dolor sit.</p>
-    <!--  Text: [end] -->
+
+      <div class="news-latest-item">
+        <span class="news-latest-date">16.03.2011 12:38</span>
+        <a href="#"><p>Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies...</p></a>
+        <hr class="clearer" />
       </div>
-  <!--  CONTENT ELEMENT, uid:71/text [end] -->
-    
-            </div>
-            <div class="start-teaser start-teaser-last">
-              
-  <!--  CONTENT ELEMENT, uid:73/image [begin] -->
-    <div id="c73" class="csc-default"><h1>protonet BUSINESS</h1>
-    <!--  Image block: [begin] -->
-      <div class="csc-textpic csc-textpic-left csc-textpic-above"><div class="csc-textpic-imagewrap csc-textpic-single-image"><img src="uploads/pics/start-business.png" width="256" height="85" border="0" alt="" /></div></div><div class="csc-textpic-clear"><!-- --></div>
-    <!--  Image block: [end] -->
-      </div>
-  <!--  CONTENT ELEMENT, uid:73/image [end] -->
-    
-            </div>
-          </div>
-        </div>
-        <!-- wrapper-content end -->
+    </div>
+  </div>
+
+  <div class="start-teaser">
+    <h1>protonet PRIVAT</h1>
+    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est Lorem ipsum dolor sit amet lorem ipsum dolor sit.</p>
+  </div>
+
+  <div class="start-teaser start-teaser-last">
+    <h1>protonet BUSINESS</h1>
+    <img src="uploads/pics/start-business.png" width="256" height="85" border="0" alt="" />
+  </div>
+</div>
         
-<%= render :partial => "shared/footer" %>

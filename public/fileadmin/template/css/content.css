@@ -351,29 +351,68 @@ h1.gfx {
 /************ MULTI-COLUMN CONTAINER *************/
 /************************************************/
 
-.multicolumnContainer {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-
 .multicolumnContainer p {
   text-align: justify;
 }
 
-.multicolumnContainer .columnFirst  .columnItem  {
-  padding-right: 8px;
+.multicolumnContainer.tricol .column {
+  width: 30%;
 }
 
-.multicolumnContainer .columnLast  .columnItem  {
-  padding-left: 8px;
+.multicolumnContainer .column {
+  margin-right: 25px;
 }
-
-.column  {
-  
+.multicolumnContainer .column:last-child {
+  margin-right: 0;
 }
 
 /******************* TT_ADRESS **********************/
 /************************************************/
+
+.leftimg {
+  float: left;
+  margin: 0 5% 5px 0;
+}
+.rightimg {
+  float: right;
+  margin: 0 0 5px 5%;
+}
+
+.people .panel {
+  float: left;
+  width: 168px;
+  margin: 0 15px 0 0;
+  min-height: 360px;
+}
+.people .panel img {
+  margin-bottom: 20px;
+}
+.people .panel h3 {
+  font-size: 1em;
+}
+.people .panel p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+#helpcards div {
+  float: left;
+  width: 256px;
+  margin: 0 30px 10px 0;
+}
+#helpcards img {
+  width: 67px;
+  height: 67px;
+  float:left;
+  margin-right: 12px;
+}
+#helpcards h2 {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+#helpcards p {
+  text-align: justify;
+}
 
 .tx-ttaddress-pi1 {
   clear: both;
@@ -395,53 +434,6 @@ h1.gfx {
   /* background: url('../images/_TEMP/protonet/protonet-buy.png') no-repeat; */
   color: #3B383A;
   font-size: 1.5em;
-}
-
-.vcard {
-  float: left;
-  width: 168px;
-  margin: 0 12px 0 0;
-  min-height: 360px;
-}
-
-.vcard img {
-  margin-bottom: 20px;
-}
-
-.vcard p {
-  margin-top: 10px;
-  text-align: justify;
-}
-
-.vcard .fn, .vcard .org {
-  display: block;
-  width: 100%;
-}
-
-.vcard .fn, .vcard_small .fn {
-  font-size: 1em;
-}
-
-.vcard_small {
-  float: left;
-  width: 256px;
-  margin: 0 30px 10px 0;
-  min-height: 140px;
-}
-
-.vcard_small img {
-  width: 67px;
-  height: 67px;
-  float:left;
-  margin-right: 12px;
-}
-
-.vcard_small h2 {
-  margin-bottom: 10px;
-}
-
-.vcard_small p {
-  text-align: justify;
 }
 
 /******************* MAILFORM PLUS **************/

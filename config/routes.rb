@@ -1,21 +1,15 @@
 ProtonetHomepage::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  match 'team'      => 'content#team'
-  match 'protonet'  => 'content#protonet'
-  match 'protonet_easy'     => 'content#protonet_easy'
-  match 'protonet_social'   => 'content#protonet_social'
-  match 'protonet_sharing'  => 'content#protonet_sharing'
-  match 'protonet_anywhere' => 'content#protonet_anywhere'
-  match 'protonet_more'     => 'content#protonet_more'
-  match 'box'               => 'content#box'
-  match 'box_base'          => 'content#box_base'
-  match 'box_power'         => 'content#box_power'
-  match 'box_business'      => 'content#box_business'
+  
+  match 'team'              => 'content#team'
+  match 'protonet(/:tab)'   => 'content#protonet', :as => :protonet
+  match 'box(/:tab)'        => 'content#box',      :as => :box
   match 'buy'               => 'content#buy'
   match 'support'           => 'content#support'
   match 'contact'           => 'content#contact'
   match 'imprint'           => 'contact#imprint'
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

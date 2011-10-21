@@ -1,71 +1,36 @@
-<%= render :partial => "shared/header" %>
-<link rel="stylesheet" href="fileadmin/template/plugins/mailform/protonet_mailform_css.css" type="text/css" media="screen" />
-<div id="wrapper-content">
-  <!--  CONTENT ELEMENT, uid:81/multicolumn [begin] -->
-  <div id="c81" class="csc-default">
-    <h1>
-      Contact the dudes
-    </h1>
-    <div class="multicolumnContainer multicolumnLayout1 clearfix" style="width: 100%;">
-      <div style="width: 49.9%;" class="column column1 columnFirst listItemFirst">
-        <div class="columnItems" style="padding: 0 6px 0 0">
-          <div class="columnItem columnItem1 columnItemFirst listItemFirst columnItemLast listItemLast columnItemtext">
-            <!--  CONTENT ELEMENT, uid:82/text [begin] -->
-            <div id="c82" class="csc-default">
-              <!--  Text: [begin] -->
-              <p class="bodytext">
-                Pellentesque libero tortor, sodales et pretium in, iaculis ac sem. Donec ac velit dui, et imperdiet sem. Suspendisse bibendum urna a eros accumsan pulvinar. Etiam ut erat orci, eget sollicitudin lorem. Donec tincidunt, orci ac eleifend suscipit, dui nulla scelerisque dolor, a porttitor lorem ligula at tellus. Aenean ultricies laoreet scelerisque. Nam in magna eu arcu euismod ultricies. Pellentesque consectetur velit quis turpis ultrices mattis. Quisque vitae euismod ligula. Fusce pellentesque mollis dapibus.
-              </p>
-              <p class="bodytext">
-                Etiam vitae libero vitae ligula vulputate malesuada. Pellentesque varius, leo eu laoreet sollicitudin, elit mi lobortis leo, sed ullamcorper magna mi non ipsum. Praesent suscipit vehicula lorem ac dictum. Nulla viverra, elit a facilisis tincidunt, orci turpis rhoncus diam, eu sodales nisi neque non diam. Duis eget urna at massa mattis hendrerit. Nam velit felis, volutpat eu lobortis sit amet, eleifend a sem. Etiam sit amet tortor eget lacus vestibulum varius vel non tortor. Praesent vitae dui velit. Fusce vel leo tellus. Quisque mattis purus vel erat convallis ut vulputate ipsum congue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin hendrerit nunc nec justo posuere a rutrum leo interdum. Fusce vitae semper nibh. Maecenas suscipit viverra massa quis convallis. Nunc tincidunt vestibulum condimentum. Phasellus consectetur sem ac nisl tempus ullamcorper ultrices mauris dignissim. Fusce fringilla iaculis facilisis. Proin ipsum arcu, congue nec euismod a, rhoncus at ante.
-              </p><!--  Text: [end] -->
-            </div><!--  CONTENT ELEMENT, uid:82/text [end] -->
-          </div>
-        </div>
-      </div>
-      <div style="width: 49.9%;" class="column column2 columnLast listItemLast">
-        <div class="columnItems" style="padding: 0 0 0 6px">
-          <div class="columnItem columnItem1 columnItemFirst listItemFirst columnItemLast listItemLast columnItemlist">
-            <!--  CONTENT ELEMENT, uid:83/list [begin] -->
-            <div id="c83" class="csc-default">
-              <!--  Plugin inserted: [begin] -->
-              <!--
+<% content_for :head do -%>
+  <link rel="stylesheet" href="fileadmin/template/plugins/mailform/protonet_mailform_css.css" type="text/css" media="screen" />
+<% end -%>
 
-BEGIN: Content of extension "th_mailformplus", plugin "tx_thmailformplus_pi1"
-
--->
-              <div class="tx-thmailformplus-pi1">
-                <div class="mailformplus_contactform">
-                  <form name="contact_form" method="post" action="index.php?id=14" id="contact_form">
-                    <fieldset>
-                      <legend>Please fill out the form</legend> <input type="hidden" name="id" value="14"> <input type="hidden" name="submitted" value="1"> <input type="hidden" name="L" value=""> <input type="hidden" name="type" value="">
-                      <div>
-                        <label for="name">Name*</label> <input type="text" name="name" id="name" value=""><br>
-                        <label for="subject">Subject</label> <input type="text" name="subject" id="subject" value=""><br>
-                        <label for="email">E-Mail*</label> <input type="text" name="email" id="email" value=""><br>
-                        <label for="phone">Phone</label> <input type="text" name="phone" id="phone" value=""><br>
-                        <label for="text">Text*</label> 
-                        <textarea cols="50" rows="5" name="text" id="text" style="width:320px;">
-</textarea><br>
-                        <div class="caption">
-                          Please contact me via
-                        </div><input type="radio" name="contact_via" value="email" id="contact_email" style="border-style:none;"><label class="radio_caption" for="contact_email">E-Mail</label><br>
-                        <input type="radio" name="contact_via" value="phone" id="contact_phone" style="border-style:none;"><label class="radio_caption" for="contact_phone">Phone</label><br>
-                        <p>
-                          Fields marked with <strong>*</strong> are <strong>required</strong>.
-                        </p><input type="submit" value="Submit">
-                      </div>
-                    </fieldset>
-                  </form>
-                </div>
-              </div><!-- END: Content of extension "th_mailformplus", plugin "tx_thmailformplus_pi1" -->
-              <!--  Plugin inserted: [end] -->
-            </div><!--  CONTENT ELEMENT, uid:83/list [end] -->
-          </div>
-        </div>
-      </div>
+<h1>Contact the dudes</h1>
+<div class="clearfix">
+  <div style="width: 50%; float: left;">
+    <div style="padding: 0 6px 0 0">
+      <p>
+        Pellentesque libero tortor, sodales et pretium in, iaculis ac sem. Donec ac velit dui, et imperdiet sem. Suspendisse bibendum urna a eros accumsan pulvinar. Etiam ut erat orci, eget sollicitudin lorem. Donec tincidunt, orci ac eleifend suscipit, dui nulla scelerisque dolor, a porttitor lorem ligula at tellus. Aenean ultricies laoreet scelerisque. Nam in magna eu arcu euismod ultricies. Pellentesque consectetur velit quis turpis ultrices mattis. Quisque vitae euismod ligula. Fusce pellentesque mollis dapibus.
+      </p>
+      <p>
+        Etiam vitae libero vitae ligula vulputate malesuada. Pellentesque varius, leo eu laoreet sollicitudin, elit mi lobortis leo, sed ullamcorper magna mi non ipsum. Praesent suscipit vehicula lorem ac dictum. Nulla viverra, elit a facilisis tincidunt, orci turpis rhoncus diam, eu sodales nisi neque non diam. Duis eget urna at massa mattis hendrerit. Nam velit felis, volutpat eu lobortis sit amet, eleifend a sem. Etiam sit amet tortor eget lacus vestibulum varius vel non tortor. Praesent vitae dui velit. Fusce vel leo tellus. Quisque mattis purus vel erat convallis ut vulputate ipsum congue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin hendrerit nunc nec justo posuere a rutrum leo interdum. Fusce vitae semper nibh. Maecenas suscipit viverra massa quis convallis. Nunc tincidunt vestibulum condimentum. Phasellus consectetur sem ac nisl tempus ullamcorper ultrices mauris dignissim. Fusce fringilla iaculis facilisis. Proin ipsum arcu, congue nec euismod a, rhoncus at ante.
+      </p>
     </div>
-  </div><!--  CONTENT ELEMENT, uid:81/multicolumn [end] -->
-</div><!-- wrapper-content end -->
-
-<%= render :partial => "shared/footer" %>
+  </div>
+  <div style="width: 50%; float: right;">
+    <div style="padding: 0 0 0 6px" class="tx-thmailformplus-pi1 mailformplus_contactform">
+      <form>
+        <label for="name">Name*</label> <input type="text" name="name" id="name" value=""><br>
+        <label for="subject">Subject</label> <input type="text" name="subject" id="subject" value=""><br>
+        <label for="email">E-Mail*</label> <input type="text" name="email" id="email" value=""><br>
+        <label for="phone">Phone</label> <input type="text" name="phone" id="phone" value=""><br>
+        <label for="text">Text*</label> 
+        <textarea cols="50" rows="5" name="text" id="text" style="width:320px;">
+</textarea><br>
+        <p>Fields marked with <strong>*</strong> are <strong>required</strong>.</p>
+        <div class="caption">Please contact me via</div>
+        <input type="radio" name="contact_via" value="email" id="contact_email" style="border-style:none;"><label class="radio_caption" for="contact_email">E-Mail</label><br>
+        <input type="radio" name="contact_via" value="phone" id="contact_phone" style="border-style:none;"><label class="radio_caption" for="contact_phone">Phone</label><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
