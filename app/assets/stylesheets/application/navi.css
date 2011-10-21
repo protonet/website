@@ -15,7 +15,7 @@
 #navi-main {
 	margin: 0 0 0 0;
 	padding: 0 10px 0 0;
-	background: url(../images/bg-navi-main-end.png) 100% 0 no-repeat;
+	background: url(/assets/bg-navi-main-end.png) 100% 0 no-repeat;
 	height: 66px;
 	float: right;
 }
@@ -26,12 +26,12 @@
 	padding: 24px 0 0 0;
 	float: left; 
 	height: 43px;
-	background: url(../images/bg-navi-main.png) 0 0 repeat-x;
+	background: url(/assets/bg-navi-main.png) 0 0 repeat-x;
 }
 
 #navi-main li.first {
 	padding-left: 30px;
-	background: url(../images/bg-navi-main-start.png) 0 0 no-repeat;
+	background: url(/assets/bg-navi-main-start.png) 0 0 no-repeat;
 }
 
 #navi-main li a {

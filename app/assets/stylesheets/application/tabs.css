@@ -6,7 +6,7 @@
 .rgtabs-wrapper {
   padding: 10px 15px;
   margin: 0 0 20px 0;
-  background:#fff url(teaser_background.gif) bottom left no-repeat;
+  background:#fff url(/assets/teaser_background.gif) bottom left no-repeat;
   overflow:hidden;
   clear:both;
   /* min-height: 400px; */
@@ -16,7 +16,7 @@
 /* add a loading icon */
 .rgtabs-wrapper .rgtabs-ajax-loading {
   padding: 170px 0;
-  background: url(ajax-loader.gif) no-repeat center;
+  background: url(/assets/ajax-loader.gif) no-repeat center;
 }
 
 /* Tab-Menu ul */
@@ -60,15 +60,15 @@
 /* Tabs */
 
 .rgtabs-menu .tabfirst {
-  background: url(subnavi_first.gif);
+  background: url(/assets/subnavi_first.gif);
 }
 
 .rgtabs-menu .tabmiddle {
-  background: url(subnavi_middle.gif);
+  background: url(/assets/subnavi_middle.gif);
 }
 
 .rgtabs-menu .tablast {
-  background: url(subnavi_last.gif);
+  background: url(/assets/subnavi_last.gif);
   background-position: right top;
 }
 
@@ -77,15 +77,15 @@
 }
 
 .rgtabs-menu-3 .tabfirst {
-  background: url(subnavi_first_3.gif);
+  background: url(/assets/subnavi_first_3.gif);
 }
 
 .rgtabs-menu-3 .tabmiddle {
-  background: url(subnavi_middle_3.gif);
+  background: url(/assets/subnavi_middle_3.gif);
 }
 
 .rgtabs-menu-3 .tablast {
-  background: url(subnavi_last_3.gif);
+  background: url(/assets/subnavi_last_3.gif);
   background-position: right top;
 }
 
@@ -114,6 +114,6 @@
 
 /* Trenner */
 .csc-frame-rulerBefore {
-  background: url(trenner.png) top left repeat-x;
+  background: url(/assets/trenner.png) top left repeat-x;
   padding-top: 20px;
 }

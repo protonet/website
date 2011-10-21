@@ -6,9 +6,8 @@ span.powermail_mandatory {
 }
 input.validation-failed,
 textarea.validation-failed {
-	/* Background color if validation failed 
-	background-color: red;*/
-	background-image: url(/typo3conf/ext/powermail/img/icon_exclamation.gif);
+	/* Background color if validation failed */
+	background-color: red;
 	background-repeat: no-repeat;
 	background-position: 98% 1px;
 }

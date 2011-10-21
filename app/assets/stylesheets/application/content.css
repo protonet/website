@@ -13,11 +13,11 @@
 #wrapper-shadow {
   width: 1038px;
   margin: 0 auto;
-  background: url(../images/bg-wrapper-shadow.png) 0 bottom no-repeat;
+  background: url(/assets/bg-wrapper-shadow.png) 0 bottom no-repeat;
 }
 
 #wrapper-shadow-top {
-  background: url(../images/bg-wrapper-shadow-top.png) 0 0 no-repeat;
+  background: url(/assets/bg-wrapper-shadow-top.png) 0 0 no-repeat;
   width: 980px;
   padding: 0 29px;
 }
@@ -26,7 +26,7 @@
   width: 980px;
   padding: 0px 0px;  
   margin: 0 auto;
-  background: url(../images/bg-wrapper-header.png) 0 0 repeat-x;
+  background: url(/assets/bg-wrapper-header.png) 0 0 repeat-x;
 }
 
 h1.gfx {
@@ -84,7 +84,7 @@ h1.gfx {
   margin: 0 0 0 0;
   padding: 0 40px 0 40px;
   height: 414px;
-  background: #ffffff bottom url(../images/_TEMP/protonet/protonet-teaser-box.png) no-repeat;
+  background: #ffffff bottom url(/assets/protonet-teaser-box.png) no-repeat;
 }
 
 #wrapper-protonet-teaser-content
@@ -95,7 +95,7 @@ h1.gfx {
 
 #wrapper-protonet-teaser-content-top
 {
-  background: left bottom repeat-x url(../images/_TEMP/protonet/trenner.png);
+  background: left bottom repeat-x url(/assets/trenner.png);
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
@@ -165,17 +165,17 @@ h1.gfx {
 
 #wrapper-protonet-submenu .submenu-first
 {
-  background: url(../images/_TEMP/protonet/submenu/submenu-first.png) no-repeat;
+  background: url(/assets/submenu-first.png) no-repeat;
 }
 
 #wrapper-protonet-submenu .submenu-item
 {
-  background: url(../images/_TEMP/protonet/submenu/submenu-middle.png) repeat-x;
+  background: url(/assets/submenu-middle.png) repeat-x;
 }
 
 #wrapper-protonet-submenu .submenu-last
 {
-  background: url(../images/_TEMP/protonet/submenu/submenu-last.png) no-repeat;
+  background: url(/assets/submenu-last.png) no-repeat;
 }
 
 #wrapper-protonet-submenu ul li a
@@ -299,7 +299,7 @@ h1.gfx {
   height: 133px;
   margin: 0 20px 0 0;
   padding: 20px;
-  background: url(../images/bg-start-teaser.png) 0 0 no-repeat;
+  background: url(/assets/bg-start-teaser.png) 0 0 no-repeat;
   float: left;
   font-size: .95em;
 }
@@ -328,7 +328,7 @@ h1.gfx {
 .start-teaser .news-latest-item h3 a {
   font-size: .55em;
   padding: 0 0 0 12px;
-  background: url(../images/bg-arrow.png) 0 3px no-repeat;
+  background: url(/assets/bg-arrow.png) 0 3px no-repeat;
 }
 
 .start-teaser .news-latest-item p {
@@ -472,7 +472,7 @@ h1.gfx {
 .start-teaser .news-latest-item p {
   color: #808080;
   padding-left: 1.2em;
-  background: url(../images/bg-arrow.png) 0 2px transparent no-repeat;
+  background: url(/assets/bg-arrow.png) 0 2px transparent no-repeat;
 }
 
 .news-single-rightbox {
@@ -536,7 +536,7 @@ h1.gfx {
   text-align: center;
   font-weight: bold;
   display: block;
-  background: url(../images/bg-bulletlist-2-li.png) 0 0 no-repeat;
+  background: url(/assets/bg-bulletlist-2-li.png) 0 0 no-repeat;
 }
 
 
@@ -544,7 +544,7 @@ h1.gfx {
 /**********************************************/
 
 .order-top {
-  background: url(../images/bg-order-top.png) left bottom no-repeat;
+  background: url(/assets/bg-order-top.png) left bottom no-repeat;
   height: 268px;
 }
 
@@ -555,7 +555,7 @@ h1.gfx {
 }
 
 #order-top-navi li.order-top-navi-item {
-  background: url(../images/bg-order-top-navi.png) 0 0 no-repeat;
+  background: url(/assets/bg-order-top-navi.png) 0 0 no-repeat;
   width: 186px;
   height: 268px;
   margin: 0 0 0 0;

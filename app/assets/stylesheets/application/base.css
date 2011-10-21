@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	background-image: url(../images/bg-body.png);
+	background-image: url(/assets/bg-body.png);
 	background-repeat: repeat;
 	font: normal .75em/135% Verdana, Arial, sans-serif;
 	color: #808080;
@@ -23,7 +23,7 @@ body.body-content #wrapper-content {
 
 @font-face {
 font-family: ptn_font;
-src: url('ulc_font.ttf');
+src: url('/assets/ulc_font.ttf'); /*TODO*/
 font-style: normal;
 font-weight: normal;
 }
@@ -103,7 +103,7 @@ a:hover {
 }
 
 .arrow {
-	background-image: url(../images/bg-arrow.png);
+	background-image: url(/assets/bg-arrow.png);
 	background-repeat: no-repeat;
 	padding: 0 0 0 12px;
 	background-position: 0 3px;
