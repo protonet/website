@@ -47,5 +47,7 @@ module ProtonetHomepage
     
     # Add a fonts pipeline
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    config.assets.paths << "#{Rails.root}/app/assets/javascripts"
+    p config.assets.paths
   end
 end

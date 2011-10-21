@@ -46,7 +46,7 @@ jQuery.fn.codaSlider = function(settings) {
 		
 		// If we need arrows
 		if (settings.dynamicArrows) {
-			slider.parent().addClass("arrows");
+			slider.parentElement.addClass("arrows");
 			slider.after('<div class="cb"></div>');
 			slider.after('<div class="coda-nav-right" id="coda-nav-right-' + sliderCount + '"><a href="#">' + settings.dynamicArrowRightText + '</a></div>');
 			slider.after('<div class="coda-nav-left" id="coda-nav-left-' + sliderCount + '"><a href="#">' + settings.dynamicArrowLeftText + '</a></div>');
