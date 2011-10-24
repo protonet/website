@@ -338,7 +338,7 @@ h1.gfx {
   line-height: 1em;
 }
 
-.start-teaser-last {
+.start-teaser:last-child  {
   margin-right: 0px !important;
 }
 
@@ -384,6 +384,9 @@ h1.gfx {
   margin: 0 15px 0 0;
   min-height: 360px;
 }
+.people .panel:last-child {
+  margin: 0 0px 0 0;
+}
 .people .panel img {
   margin-bottom: 20px;
 }
@@ -414,26 +417,22 @@ h1.gfx {
   text-align: justify;
 }
 
-.tx-ttaddress-pi1 {
-  clear: both;
-  width: 900px;
+#team-cards {
+  position:relative;
   overflow: hidden;
-  min-height: 400px;
+  width:  940px;
+  height: 370px;
 }
 
-.coda-nav-left, .coda-nav-right {
-  display: inline;
+#team-cards .items {
+  width:10000em;
+  position:absolute;
+  clear: both;
+}
+
+#team-cards .team-slice {
   float: left;
-}
-
-.coda-nav-right {
-  float: right;
-}
-
-.coda-nav-left a, .coda-nav-right a {
-  /* background: url('../images/_TEMP/protonet/protonet-buy.png') no-repeat; */
-  color: #3B383A;
-  font-size: 1.5em;
+  width: 940px;
 }
 
 /******************* MAILFORM PLUS **************/

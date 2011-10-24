@@ -1,57 +1,27 @@
 <h1>Meet the dudes</h1>
 <div class="tx-ttaddress-pi1 people clearfix" id="team-cards">
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_1.jpg" width="167" height="167" alt="Ali Jelveh" title="Ali Jelveh" />
-    <h2>Ali Jelveh</h2>
-    <h3>Geschäftsführer</h3>
-    <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
+  <div class="items">
+  <%- @team.each_slice(5) do |slice| -%>
+    <div class="team-slice">
+    <%- slice.each do |data| -%>
+    <div class="vcard panel">
+      <img src="<%= data[:picture] %>" width="167" height="167" alt="<%= data[:name] %>" title="<%= data[:name] %>" />
+      <h2><%= data[:name] %></h2>
+      <h3><%= data[:position] %></h3>
+      <p><%= data[:description] %></p>
+      <div class="adr"></div>
+    </div>
+    <%- end -%>
+    </div>
+  <%- end -%>
   </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_2.jpg" width="167" height="167" alt="Christopher Blum" title="Christopher Blum" />
-    <h2>Christopher Blum</h2>
-    <h3>Geschäftsführer</h3>
-    <p>Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
-  </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_5_01.jpg" width="167" height="167" alt="David Burkhard" title="David Burkhard" />
-    <h2>David Burkhard</h2>
-    <p style="margin-top: 10px;">Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
-    <div class="adr"></div>
-  </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_4_01.jpg" width="167" height="167" alt="Dennis Blöte" title="Dennis Blöte" />
-    <h2>Dennis Blöte</h2>
-    <p style="margin-top: 10px;">Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
-    <div class="adr"></div>
-  </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_5.jpg" width="167" height="167" alt="Johannes von Bargen" title="Johannes von Bargen" />
-    <h2>Johannes von Bargen</h2>
-    <p style="margin-top: 10px;">Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
-    <div class="adr"></div>
-  </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_4_02.jpg" width="167" height="167" alt="Martin Hügli" title="Martin Hügli" />
-    <h2>Martin Hügli</h2>
-    <p style="margin-top: 10px;">Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est.</p>
-    <div class="adr"></div>
-  </div>
-
-  <div class="vcard panel">
-    <img src="uploads/pics/dude_5_02.jpg" width="167" height="167" alt="Reza Jelveh" title="Reza Jelveh" />
-    <h2>Reza Jelveh</h2>
-    <p style="margin-top: 10px;">Lorem ipsum dolor sit amet lorem ipsum dolor sit. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est. </p>
-    <div class="adr"></div>
-  </div>
-
   <div class="cb"></div>
 </div>
-
+<a class="prev browse left">back</a>
+<a class="next browse right">forward</a>
+<script type="text/javascript">
+  jQuery("#team-cards").scrollable();
+</script>
 
 <div class="clearfix">
   <h1>And that's our office</h1>

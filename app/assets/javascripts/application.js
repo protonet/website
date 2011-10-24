@@ -6,10 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-1.5.min
-//= require jquery.coda-slider-2.0
-//= require jquery.easing.1.3
 //= require jquery.uniform.min
-//= require zs
+//= require jquery.tools.min
 // require_tree .
 

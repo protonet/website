@@ -1,32 +1,7 @@
 <img src="/assets/index/start-teaser-1.jpg" style="padding-bottom: 20px;" />
 
 <div id="wrapper-start-teaser" class="clearfix">
-  <div class="start-teaser">
-    <h1>aktuelle NEWS</h1>
-
-    <div class="news-latest-container">
-      <div class="news-latest-item">
-        <span class="news-latest-date">16.03.2011 16:47</span>
-        <a href="#"><p>Second test sub</p></a>
-        <hr class="clearer" />
-      </div>
-
-      <div class="news-latest-item">
-        <span class="news-latest-date">16.03.2011 12:38</span>
-        <a href="#"><p>Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies ist ein Test Dies...</p></a>
-        <hr class="clearer" />
-      </div>
-    </div>
-  </div>
-
-  <div class="start-teaser">
-    <h1>protonet PRIVAT</h1>
-    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, takimata sanctus est Lorem ipsum dolor sit amet lorem ipsum dolor sit.</p>
-  </div>
-
-  <div class="start-teaser start-teaser-last">
-    <h1>protonet BUSINESS</h1>
-    <img src="/assets/index/start-business.png" width="256" height="85" border="0" alt="" />
-  </div>
+  <%- [:news, :business, :private].each do |box| %>
+    <%= render :partial => "shared/box_#{box}" -%>
+  <%- end %>
 </div>
-        
