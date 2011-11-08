@@ -3,23 +3,25 @@ class ApplicationController < ActionController::Base
   
   def base_node
     {
-      :cpu => "Dual Core (Intel D525)"
+      :cpu => "Dual Core (Intel D525)",
       :ram => "1GB",
       :max_ram => "4GB",
       :sound => ["Intel High Definition Audio"],
       :lan => "Gigabit Etherent(1000Mbit)",
       :usb => ["4x USB2.0"],
       :sata => ["2x SATA 3GB/s (1 Used)"],
-      :harddisk => ["1x 500GB"],
+      :harddisk => ["1x 250GB"],
       :extension => ["PCI Slot", "Mini PCIe (Used by Wireless Adapter)"],
-      :technical_extensions => ["Serial Port", "Parallel Port", "2x PS/2", "More internal USBs"],
+      :technical_extensions => ["Serial Port", "Parallel Port", "2x PS/2", "More internal USBs (2x USB 2.0)"],
+      :video => ["VGA"],
       :wireless => ["Wireless N"],
-      :power_usage => "ca. 30W"
-      :price_private => "€499,-",
-      :price_business => "€429,-",
+      :power_usage => "ca. 30W",
+      :price_private => "EUR 499,-",
+      :price_business => "EUR 429,-",
       :support => [""]
     }
   end
+  helper_method :base_node
   
   def power_node
     {
@@ -34,19 +36,22 @@ class ApplicationController < ActionController::Base
       :extension => ["PCIe 2.0 x16 Slot"],
       :technical_extensions => ["Serial Port", "Parallel Port", "2x PS/2", "More internal USBs (2x USB 3.0, 4x USB 2.0)"],
       :wireless => ["Wireless N"],
-      :power_usage => "ca. 30W"
-      :price_private => "€799,-",
-      :price_business => "€679,-",
+      :video => ["HDMI", "DVI"],
+      :power_usage => "ca. 30W",
+      :price_private => "EUR 799,-",
+      :price_business => "EUR 679,-",
       :support => [""]
     }
   end
+  helper_method :power_node
   
   def business_node
     power_node.merge({
-      :price_private => "€1999,-",
-      :price_business => "€1679,-",
+      :price_private => "EUR 1999,-",
+      :price_business => "EUR 1679,-",
       :support => [""]
     })
   end
+  helper_method :business_node
   
 end
