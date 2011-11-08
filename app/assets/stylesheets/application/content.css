@@ -246,6 +246,62 @@ h1.gfx {
   margin: 0 0 20px 0;  
 }
 
+/* start-teaser */
+
+.start-teaser {
+  width: 260px;
+  height: 133px;
+  margin: 0 20px 0 0;
+  padding: 20px;
+  background: url(/assets/bg-start-teaser.png) 0 0 no-repeat;
+  float: left;
+  font-size: .95em;
+}
+
+.start-teaser h2 {
+  margin: 0 0 20px 0;
+}
+
+.start-teaser h2 a {
+  display: block;
+  height: 20px;
+}
+
+.start-teaser .news-latest-item {
+  border-bottom: 1px solid #b9b6b9;
+  padding: 0 0 13px 0;
+  margin: 0 0 13px 0;
+}
+
+.start-teaser .news-latest-item-last {
+  border-bottom: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.start-teaser .news-latest-item h3 a {
+  font-size: .55em;
+  padding: 0 0 0 12px;
+  background: url(/assets/bg-arrow.png) 0 3px no-repeat;
+}
+
+.start-teaser .news-latest-item p {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #487bff;
+  line-height: 1em;
+}
+
+.start-teaser:last-child  {
+  margin-right: 0px !important;
+}
+
+.start-teaser h1 {
+  margin: -5px 0 0 0;
+  font-family: ptn_font, Arial, sans-serif;
+  font-size: 20px;
+}
+
 /************ MULTI-COLUMN CONTAINER *************/
 /************************************************/
 
@@ -282,6 +338,9 @@ h1.gfx {
   margin: 0 15px 0 0;
   min-height: 360px;
 }
+.people .panel:last-child {
+  margin: 0 0px 0 0;
+}
 .people .panel img {
   margin-bottom: 20px;
 }
@@ -312,26 +371,22 @@ h1.gfx {
   text-align: justify;
 }
 
-.tx-ttaddress-pi1 {
-  clear: both;
-  width: 900px;
+#team-cards {
+  position:relative;
   overflow: hidden;
-  min-height: 400px;
+  width:  940px;
+  height: 370px;
 }
 
-.coda-nav-left, .coda-nav-right {
-  display: inline;
+#team-cards .items {
+  width:10000em;
+  position:absolute;
+  clear: both;
+}
+
+#team-cards .team-slice {
   float: left;
-}
-
-.coda-nav-right {
-  float: right;
-}
-
-.coda-nav-left a, .coda-nav-right a {
-  /* background: url('../images/_TEMP/protonet/protonet-buy.png') no-repeat; */
-  color: #3B383A;
-  font-size: 1.5em;
+  width: 940px;
 }
 
 /******************* MAILFORM PLUS **************/
