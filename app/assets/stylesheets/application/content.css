@@ -446,6 +446,37 @@ h1.gfx {
   height: 268px;
 }
 
+.order-content {
+  background: url(/assets/bg-order-content.png) left bottom no-repeat;
+  width: 866px;
+  height: 208px;
+  padding: 10px 15px;
+}  
+
+.order-content-left {
+  width: 575px;
+  padding-top: 10px;
+  float: left;
+}  
+
+.order-content-right {
+  width: 265px;
+  float: right;
+}
+
+.order-content-right h2 {
+  margin: 0 0 10px 0;
+}
+
+.order-content-right p {
+  font-size: .94em;
+  line-height: 1.2em;
+}
+
+.order-content-right-buy {
+  margin: 15px 0 20px 0;
+}
+
 
 #order-top-navi {
   margin: 0 0 0 0;
@@ -499,4 +530,72 @@ h1.gfx {
   right: 35px;
   color: #404040;
   font-size: 1.5em;
+}
+
+/* table */
+#table-order {
+  
+}
+
+#table-order tr td {
+  border-top: 1px solid #bfbfbf;
+  padding: 20px 0;
+  vertical-align: top;
+}
+
+#table-order tr.final td {
+  border: none;
+  padding: 10px 0;
+}
+
+#table-order tr.final_first td {
+  border-top: 1px solid #bfbfbf !important;
+  padding-top: 20px !important;
+}
+
+#table-order tr.final_last td {
+  padding-bottom: 20px !important;
+}
+
+#table-order tr td.col1 {
+  width: 145px;
+  color: #404040;
+}
+#table-order tr td.col2 {
+  width: 180px;
+}
+#table-order tr td.col3 {
+  width: 300px;
+  font-size: .94em;
+}
+#table-order tr td.col4 {
+  width: 130px;
+  text-align: right;
+  color: #404040;
+}
+#table-order tr td.col5 {
+  width: 120px;
+  padding-right: 20px;
+  color: #404040;
+  text-align: right;
+}
+
+#table-order tr td.col1,
+#table-order tr td.col4,
+#table-order tr td.col5 {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+#table-order tr td.col1 div {
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+#table-order tr td.col3 span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #404040;
+  padding-bottom: 5px;
 }
