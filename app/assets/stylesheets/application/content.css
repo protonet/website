@@ -549,7 +549,9 @@ h1.gfx {
   position: relative;
 }
 
-#order-top-navi li.order-top-navi-item:hover {
+#order-top-navi li.order-top-navi-item:hover,
+#order-top-navi li.order-top-navi-item.clicked {
+  color: #fff;
   background-position: -206px 0;
   cursor: pointer;
 }
@@ -583,7 +585,7 @@ h1.gfx {
   position: absolute;
   bottom: 12px;
   right: 35px;
-  color: #404040;
+/*  color: #404040;*/
   font-size: 1.5em;
 }
 

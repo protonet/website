@@ -10,4 +10,17 @@
 
 jQuery(document).ready(function() {
   jQuery("select, input:checkbox, input:radio, input:file").uniform();
+
+  // buy
+  jQuery(".order-top-navi-item").click(function(i,j){
+    var $this = jQuery(this);
+    jQuery(".order-top-navi-item").removeClass("clicked");
+    $this.addClass("clicked");
+    jQuery(".csc-bulletlist-2").hide();
+    jQuery("#details-list-" + $this.data("node")).show();
+  });
+  
+  jQuery(".order-top-navi-item:nth-child(2)").click();
+
 });
+
