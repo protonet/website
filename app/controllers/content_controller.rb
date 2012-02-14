@@ -17,7 +17,7 @@ class ContentController < ApplicationController
         :name     => "Ali Jelveh",
         :picture  => "uploads/pics/dude_1.jpg",
         :position => "Founder/ CEO",
-        :description => "Ali joined the XING AG as a RoR developerwhere he decided to start working on the idea protonet. When not working, Ali spends his time thinking, planning and simulating."
+        :description => "Ali joined the XING AG as a RoR developer where he decided to start working on the idea protonet. When not working, Ali spends his time thinking, planning and simulating."
       },
       {
         :name => "Christopher Blum",
