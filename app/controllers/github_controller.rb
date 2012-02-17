@@ -7,14 +7,11 @@ class GithubController < ApplicationController
     # do something with githubs response?
     #github_respose = JSON params[:payload]
 
-    begin
-      git_output = `git pull`
-      # later we could check if git was successfull...
-      puts git_output
-      success = :true
-    rescue
-      success = :false
-    end
+
+    git_output = `git pull`
+    # later we could check if git was successfull...
+    puts git_output
+    success = :true
 
     render :json => {:status => :ok, :success => success}, :status => 200
 
