@@ -10,6 +10,8 @@ ProtonetHomepage::Application.routes.draw do
   match 'contact'           => 'content#contact'
   match 'imprint'           => 'contact#imprint'
   
+  post '/github/post_recieve_hook_target'    => 'github#post_recieve_hook_target'
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
