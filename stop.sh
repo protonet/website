@@ -1,4 +1,4 @@
 #!/bin/bash
 
-killall guard
+daemon --name=guard-passenger --stop
 passenger stop
