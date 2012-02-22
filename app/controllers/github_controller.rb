@@ -15,7 +15,8 @@ class GithubController < ApplicationController
     #success = :true
     #render :json => {:status => :ok, :success => success}, :status => 200
 
-    `passenger stop; passenger start`
+    passenger_output = `passenger stop; passenger start`
+    puts passenger_output
 
   end
   
