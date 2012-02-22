@@ -11,9 +11,11 @@ class GithubController < ApplicationController
     git_output = `git pull`
     # later we could check if git was successfull...
     puts git_output
-    success = :true
+    
+    #success = :true
+    #render :json => {:status => :ok, :success => success}, :status => 200
 
-    render :json => {:status => :ok, :success => success}, :status => 200
+    `passenger stop; passenger start`
 
   end
   
