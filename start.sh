@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./guard
-./passenger start -e production
+guard
+passenger start -e production
